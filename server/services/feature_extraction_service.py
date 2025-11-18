@@ -1,6 +1,6 @@
 """
 Service for comprehensive feature extraction from HuggingFace models.
-Uses the same feature extraction logic as feature_extraction_model.py
+Extracts features from model metadata including tags, dates, and other attributes.
 """
 
 import ast
