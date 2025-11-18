@@ -8,3 +8,7 @@ hf_features/*.json
 huggingface_metadata/datasets_metadata.json
 hf_features
 hf_features/index_models.jsonl
+models_popularity/popularity_classification_downloads.joblib
+models_popularity/popularity_classification_top_bottom_20.joblib
+models_popularity/popularity_regression_downloads.joblib
+models_popularity/popularity_regression_likes.joblib
