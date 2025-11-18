@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+hf_features/*.jsonl
+hf_features/*.csv
+hf_features/*.json
+.DS_Store
+huggingface_metadata/datasets_metadata.json
+hf_features
+hf_features/index_models.jsonl
