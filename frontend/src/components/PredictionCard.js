@@ -11,7 +11,7 @@ export default function PredictionCard({ data }) {
   const entityType = isDataset ? 'dataset' : 'model';
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white/70 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg">
       {/* Entity Info */}
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-1">

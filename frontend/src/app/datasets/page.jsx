@@ -36,8 +36,8 @@ export default function DatasetsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-transparent relative">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
@@ -67,23 +67,23 @@ export default function DatasetsPage() {
         {/* Stats Overview */}
         {stats && !loading && (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-white/20 p-6">
               <p className="text-sm text-gray-500 mb-1">Datasets Sampled</p>
               <p className="text-2xl font-bold text-gray-900">{stats.total_datasets_sampled?.toLocaleString()}</p>
             </div>
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-white/20 p-6">
               <p className="text-sm text-gray-500 mb-1">Avg Downloads</p>
               <p className="text-2xl font-bold text-gray-900">
                 {stats.average_downloads ? Math.round(stats.average_downloads).toLocaleString() : 'N/A'}
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-white/20 p-6">
               <p className="text-sm text-gray-500 mb-1">Avg Likes</p>
               <p className="text-2xl font-bold text-gray-900">
                 {stats.average_likes ? Math.round(stats.average_likes).toLocaleString() : 'N/A'}
               </p>
             </div>
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+            <div className="bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-white/20 p-6">
               <p className="text-sm text-gray-500 mb-1">Total Downloads</p>
               <p className="text-2xl font-bold text-gray-900">
                 {stats.total_downloads ? stats.total_downloads.toLocaleString() : 'N/A'}
@@ -128,7 +128,7 @@ export default function DatasetsPage() {
 
         {/* Top Tags */}
         {stats && stats.top_tags && stats.top_tags.length > 0 && !loading && (
-          <div className="mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <div className="mt-12 bg-white/70 backdrop-blur-md rounded-lg shadow-lg border border-white/20 p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
             <div className="flex flex-wrap gap-2">
               {stats.top_tags.map((item, idx) => (

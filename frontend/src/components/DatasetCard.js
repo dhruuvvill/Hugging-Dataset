@@ -25,7 +25,7 @@ export default function DatasetCard({ dataset, rank }) {
   };
 
   return (
-    <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-lg p-6 hover:shadow-xl hover:bg-white/80 transition-all duration-300 shadow-lg">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-2">

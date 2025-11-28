@@ -32,7 +32,7 @@ export default function SearchBar({ onSubmit, loading }) {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           placeholder="Enter HuggingFace model or dataset URL..."
-          className="w-full px-5 py-4 text-lg rounded-full border border-gray-300 shadow-sm hover:shadow-md focus:outline-none focus:shadow-lg transition-shadow text-black"
+          className="w-full px-5 py-4 text-lg rounded-full border border-white/30 bg-white/80 backdrop-blur-md shadow-lg hover:shadow-xl focus:outline-none focus:shadow-2xl focus:bg-white/90 transition-all text-black"
           disabled={loading}
         />
         <div className="absolute right-3 top-1/2 -translate-y-1/2 flex gap-2">
@@ -47,14 +47,14 @@ export default function SearchBar({ onSubmit, loading }) {
         <button
           type="submit"
           disabled={loading || !url}
-          className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 border border-transparent rounded text-sm text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="px-6 py-2.5 bg-white/70 backdrop-blur-md hover:bg-white/90 border border-white/30 rounded text-sm text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-md hover:shadow-lg"
         >
           Model Search
         </button>
         <button
           type="button"
           disabled={loading}
-          className="px-6 py-2.5 bg-gray-100 hover:bg-gray-200 border border-transparent rounded text-sm text-gray-700 disabled:opacity-50"
+          className="px-6 py-2.5 bg-white/70 backdrop-blur-md hover:bg-white/90 border border-white/30 rounded text-sm text-gray-700 disabled:opacity-50 transition-all shadow-md hover:shadow-lg"
           onClick={() => setUrl('')}
         >
           Clear
@@ -71,7 +71,7 @@ export default function SearchBar({ onSubmit, loading }) {
               type="button"
               onClick={() => handleExample(example)}
               disabled={loading}
-              className="px-4 py-2 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded text-sm text-blue-600 disabled:opacity-50 transition-colors"
+              className="px-4 py-2 bg-white/60 backdrop-blur-md hover:bg-white/80 border border-white/30 rounded text-sm text-blue-600 disabled:opacity-50 transition-all shadow-sm hover:shadow-md"
             >
               {example}
             </button>

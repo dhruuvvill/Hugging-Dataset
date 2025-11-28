@@ -27,8 +27,8 @@ export default function PredictionsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <main className="flex flex-col items-center justify-center min-h-screen">
+    <div className="min-h-screen bg-transparent relative">
+      <main className="flex flex-col items-center justify-center min-h-screen relative z-10">
         {/* Logo/Title */}
         <div className="text-center mb-8">
           <h1 className="text-6xl font-normal text-gray-900 mb-2 tracking-tight">

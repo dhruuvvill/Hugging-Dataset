@@ -27,8 +27,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <main className="flex flex-col items-center justify-center min-h-screen">
+    <div className="min-h-screen bg-transparent relative">
+      <main className="flex flex-col items-center justify-center min-h-screen relative z-10">
         {/* Logo/Title */}
         <div className="text-center mb-8">
           <h1 className="text-6xl font-normal text-gray-900 mb-2 tracking-tight">
@@ -63,7 +63,7 @@ export default function Home() {
           <div className="w-full max-w-7xl mt-8 px-4 pb-20">
             <div className="space-y-6">
               {/* Model Info & Prediction */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg">
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
@@ -139,7 +139,7 @@ export default function Home() {
 
               {/* Feature Importance */}
               {result.feature_importance && result.feature_importance.length > 0 && (
-                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Feature Importance</h3>
                   <div className="space-y-2">
                     {result.feature_importance.slice(0, 10).map((item, idx) => (
@@ -165,7 +165,7 @@ export default function Home() {
               )}
 
               {/* Features Grid */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <div className="bg-white/70 backdrop-blur-md border border-white/20 rounded-lg p-6 shadow-lg">
                 <h3 className="text-lg font-semibold text-gray-900 mb-6">Extracted Features</h3>
                 <FeatureGrid 
                   features={result.features} 
